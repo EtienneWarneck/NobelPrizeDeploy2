@@ -20,7 +20,7 @@
  } */
 
   .style {
-     border: 1px solid red;
+     /* border: 1px solid red; */
      color: #BB8A35 !important;
      height: 8em !important;
      position: relative;
@@ -30,7 +30,7 @@
  }
 
  .styleText {
-     border: 10px solid blue;
+     /* border: 10px solid blue; */
      color: #DDC59D !important;
      font-size: 3em;
      text-align: center;
