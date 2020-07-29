@@ -11,7 +11,7 @@ class NavBar extends Component {
         return (
             <div className={classes.style} >
                 <Navbar bg="" expand="lg" className="navbar d-flex justify-content-center" >
-                    <Nav.Link className={classes.styleText} href='/'>Nobel Prize Laureates</Nav.Link>
+                    <Nav className={classes.styleText} href='/'>Nobel Prize Laureates</Nav>
                 </Navbar>
             </div>
         )
