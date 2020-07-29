@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
-import Navbar from 'react-bootstrap/Navbar'
+import Link from 'react-bootstrap/Link'
 import Nav from 'react-bootstrap/Nav'
+import Navbar from 'react-bootstrap/Navbar'
 import classes from './NavBarTitle.module.css';
-
-// import Radium from 'radium';
 
 class NavBarTitle extends Component {
 
     render() {
         return (
-            <div className={classes.style} >
+            <div>
                 <Navbar bg="" expand="lg" className="navbar d-flex justify-content-center" >
-                    <Nav className={classes.styleText} href='/'>Nobel Prize Laureates</Nav>
+                    <div className={classes.style} >
+                        <Nav.Link className={classes.styleText} href='/'>Nobel Prize Laureates</Nav.Link>
+                    </div>
                 </Navbar>
             </div>
         )
