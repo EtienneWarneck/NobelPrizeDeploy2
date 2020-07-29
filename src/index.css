@@ -1,0 +1,9 @@
+@import url("https://use.typekit.net/ooi0tsa.css");
+
+body {
+    font-family: degular, sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    width: 100%;
+    /* border: 10px solid red; */
+}
