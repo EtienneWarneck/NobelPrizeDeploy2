@@ -5,7 +5,7 @@ import classes from './Navbar.module.css';
 
 // import Radium from 'radium';
 
-class NavBar extends Component {
+class NavBarTitle extends Component {
 
     render() {
         return (
@@ -18,5 +18,5 @@ class NavBar extends Component {
     }
 }
 
-export default NavBar;
+export default NavBarTitle;
 
