@@ -8,7 +8,7 @@ class NavBarTitle extends Component {
     render() {
         return (
             <div>
-                <Navbar className={classes.style} bg="" expand="lg" >
+                <Navbar className={classes.style} bg="" expand="lg" color=" #DDC59D">
                         <Nav.Link className={classes.styleText} href='/'>Nobel Prize Laureates</Nav.Link>
                 </Navbar>
             </div>
