@@ -30,19 +30,17 @@
 
 .style {
     border: 1px solid red;
-    color: #BB8A35;
-    height: 8em;
+    color: #BB8A35 !important;
+    height: 8em !important;
     position: relative;
-    border-bottom: 10px solid lightgrey;
     outline: none !important;
     box-shadow: none !important;
     justify-content: center;
-    display: flex;
 }
 
 ;
 .styleText {
-    border: 1px solid red;
+    border: 10px solid red;
     color: #DDC59D;
     font-size: 3em;
     text-align: center;
