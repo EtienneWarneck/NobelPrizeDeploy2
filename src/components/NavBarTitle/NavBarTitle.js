@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
-import classes from './Navbar.module.css';
+import classes from './NavBarTitle.module.css';
 
 // import Radium from 'radium';
 
