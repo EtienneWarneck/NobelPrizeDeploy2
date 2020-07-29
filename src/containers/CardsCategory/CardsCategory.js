@@ -100,22 +100,24 @@ class Cards extends Component {
     render() {
         const { searchYear, searchName, allCards } = this.state;
 
-        let filterCards = allCards.filter(card => {
-            //REGEX
-            // if (card.forEach(entry => {
-            //     console.log(entry)
-            //     let regexp = /[\w+ \s]+ /gi;
-            //     let result = entry.match(regexp);
-            //     console.log(result);
-            // })
-            // )
+        let filterCards = allCards.filter(card => card.awardYear && card.laureates)
+        // {
+            
+        //     //REGEX
+        //     // if (card.forEach(entry => {
+        //     //     console.log(entry)
+        //     //     let regexp = /[\w+ \s]+ /gi;
+        //     //     let result = entry.match(regexp);
+        //     //     console.log(result);
+        //     // })
+        //     // )
 
-             return (
-             searchYear == card.awardYear || !searchYear ?
-                     card.laureates[0].knownName?.en.toLowerCase().includes(searchName.toLowerCase())
-            : null
-             )
-        })
+        //      return (
+        //      searchYear == card.awardYear || !searchYear ?
+        //              card.laureates[0].knownName?.en.toLowerCase().includes(searchName.toLowerCase())
+        //     : null
+        //      )
+        // })
 
         let cards = filterCards.map((card) => {
             return <WinnerCard
