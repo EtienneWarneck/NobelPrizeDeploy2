@@ -8,10 +8,8 @@ class NavBarTitle extends Component {
     render() {
         return (
             <div>
-                <Navbar bg="" expand="lg" className="navbar d-flex justify-content-center" >
-                    <div className={classes.style} >
+                <Navbar className={classes.style} bg="" expand="lg" >
                         <Nav.Link className={classes.styleText} href='/'>Nobel Prize Laureates</Nav.Link>
-                    </div>
                 </Navbar>
             </div>
         )

@@ -4,7 +4,8 @@
 
 .navbar-light .navbar-brand {
     /* color: var(--yellow); */
-    /* color:  #BB8A35;
+
+/* color:  #BB8A35;
     color:  rgb(20, 211, 13)
 }
  */
@@ -12,12 +13,18 @@
 /* .navbar-brand {
     color: var(--yellow);
     color: #BB8A35 ; */
-    /* width: 100%; */
-    /* margin: auto; */
-    /* justify-content: center; */
-    /* font-family: degular, sans-serif; */
-    /* font-style: normal; */
-    /* font-weight: 200; 
+
+/* width: 100%; */
+
+/* margin: auto; */
+
+/* justify-content: center; */
+
+/* font-family: degular, sans-serif; */
+
+/* font-style: normal; */
+
+/* font-weight: 200; 
     font-size: 3rem;
 }*/
 
@@ -29,9 +36,12 @@
     border-bottom: 10px solid lightgrey;
     outline: none !important;
     box-shadow: none !important;
-};
+    justify-content: center;
+    display: flex;
+}
 
- .styleText {
+;
+.styleText {
     border: 1px solid red;
     color: #DDC59D;
     font-size: 3em;
