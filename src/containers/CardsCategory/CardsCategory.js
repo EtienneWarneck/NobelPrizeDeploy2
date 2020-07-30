@@ -113,7 +113,9 @@ class Cards extends Component {
 
             return (
                 searchYear === card.awardYear || (!searchYear && card.laureates) ?
-                    card.laureates[0].knownName?.en.toLowerCase().includes(searchName.toLowerCase())
+                    card.laureates[0]?.knownName?.en.toLowerCase().includes(searchName.toLowerCase()) ||
+                    card.laureates[1]?.knownName?.en.toLowerCase().includes(searchName.toLowerCase()) ||
+                    card.laureates[2]?.knownName?.en.toLowerCase().includes(searchName.toLowerCase())
                     : null
             )
         })
