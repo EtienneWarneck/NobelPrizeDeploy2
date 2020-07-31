@@ -4,11 +4,9 @@ import axios from 'axios';
 import WinnerCard from '../../components/WinnerCard/WinnerCard'
 // import HomeButtons from "../HomeButtons/HomeButtons"
 // import buttonCategory from "../../components/ButtonCategory/ButtonCategory"
-// import SearchBar from '../../components/SearchBar/SearchBar';
+import SearchBar from '../../components/SearchBar/SearchBar';
 // import styled from 'styled-components';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
-
+// import Button from 'react-bootstrap/Button';
 
 // const StyledDiv = styled.div`
 // border: 10px solid orange;
@@ -23,19 +21,18 @@ class Cards extends Component {
         searchName: ''
     }
 
-
     // renderCard = card => {
     //     const { search } = this.state;
     //     var code = country.code.toLowerCase();
 
-    componentDidMount() {
-        console.log("CARDS CATEGORY", this.props)
+    async componentDidMount() {
+        console.log("[CardsCategory.js] ComponentDidMount", this.props)
         let category = this.props.match.params.category_name;
 
-        axios.get('http://api.nobelprize.org/2.0/nobelPrizes?limit=50&sort=desc&nobelPrizeCategory=' + category + '&format=json&csvLang=en')
+        await axios.get('http://api.nobelprize.org/2.0/nobelPrizes?limit=200&sort=desc&nobelPrizeCategory=' + category + '&format=json&csvLang=en')
             .then(res => {
                 const categoryData = res.data.nobelPrizes;
-                console.log("categoryData", res.data.nobelPrizes)
+                // console.log("categoryData", res.data.nobelPrizes)
                 // console.log("CATEGORY", categoryData?.category?.en)
 
                 this.setState({
@@ -47,72 +44,50 @@ class Cards extends Component {
             catch(err => console.log(err))
     };
 
-    onChangeYear = e => {
-        e.preventDefault(); //???
-        console.log("ON CHANGE", e.target.value)
-        console.log("ON CHANGE prevent", e.preventDefault)
-        this.setState({
-            searchYear: e.target.value
-        });
-    }
-    onChangeName = e => {
-        e.preventDefault(); //???
-        // console.log("ON CHANGE", e.target.value)
-        this.setState({
-            searchName: e.target.value
-        })
-    }
-
-    onClickSearch = e => {
-        // e.preventDefault(); //???
-        console.log("ON CLICK", this.state);
+    searchLaureates = (searchYear) => {
         let category = this.props.match.params.category_name;
-        axios.get('http://api.nobelprize.org/2.0/nobelPrizes?sort=desc&nobelPrizeCategory=' + category + '&format=json&csvLang=en')
+
+        axios.get('http://api.nobelprize.org/2.0/nobelPrizes?limit=200&sort=desc&nobelPrizeYear=' + searchYear + '&nobelPrizeCategory=' + category + '&format=json&csvLang=en')
             .then(res => {
+                console.log("HERE", res.data.nobelPrizes[0]?.awardYear)
                 const categoryData = res.data.nobelPrizes;
+                const yearMatch = res.data.nobelPrizes[0]?.awardYear
                 this.setState({
                     allCards: categoryData,
+                    searchYear: yearMatch
                     // category: this.props.match.params.category_name,
                 })
-            }).
-            catch(err => console.log(err))
+            })
+            .catch(err => console.log(err))
     }
 
-    onClickReset = e => {
-        this.setState({
-            allCards: [],
-            searchYear: '',
-            searchName: '',
-
-        });
-    }
-
-    handleSubmit = e => {
-        console.log("SUBMIT")
-        e.preventDefault();
-        this.setState({
-            searchYear: '',
-            searchName: ''
-        });
-
-    }
+    // handleSubmit = e => {
+    //     console.log("SUBMIT")
+    //     // alert('A name was submitted: ' + this.state.value);
+    //     let category = this.props.match.params.category_name;
+    //     axios.get('http://api.nobelprize.org/2.0/nobelPrizes?limit=120&sort=desc&nobelPrizeCategory=' + category + '&format=json&csvLang=en')
+    //         .then(res => {
+    //             const categoryData = res.data.nobelPrizes;
+    //             this.setState({
+    //                 allCards: categoryData,
+    //                 searchYear: e.target.value
+    //                 // category: this.props.match.params.category_name,
+    //             })
+    //         })
+    //         .catch(err => console.log(err))
+    //     e.preventDefault();
+    // }
 
     render() {
         const { searchYear, searchName, allCards } = this.state;
 
         let filterCards = allCards.filter(card => {
 
-            //REGEX
-            // if (card.forEach(entry => {
-            //     console.log(entry)
-            //     let regexp = /[\w+ \s]+ /gi;
-            //     let result = entry.match(regexp);
-            //     console.log(result);
-            // })
-            // )
-
             return (
-                searchYear === card.awardYear || (!searchYear && card.laureates) ?
+                // searchYear === card.awardYear || (!searchYear && card.laureates) ?
+                // searchYear === card.awardYear  ?
+                card.awardYear && card.laureates ?
+
                     card.laureates[0]?.knownName?.en.toLowerCase().includes(searchName.toLowerCase()) ||
                     card.laureates[1]?.knownName?.en.toLowerCase().includes(searchName.toLowerCase()) ||
                     card.laureates[2]?.knownName?.en.toLowerCase().includes(searchName.toLowerCase())
@@ -125,9 +100,9 @@ class Cards extends Component {
                 key={card.id}
                 awardYear={card.awardYear}
                 category={card.category.en}
-                name={card.laureates[0].knownName?.en}
-                // name1={card.laureates[1].knownName?.en}
-                // name2={card.laureates[2].knownName?.en}
+                name={card.laureates[0]?.knownName?.en}
+                name1={card.laureates[1]?.knownName?.en}
+                name2={card.laureates[2]?.knownName?.en}
                 motivation={card.laureates[0].motivation?.en}
             />
         });
@@ -140,40 +115,7 @@ class Cards extends Component {
                 {/* <HomeButtons /> */}
                 {/* </StyledDiv> */}
                 <div>
-                    {/* <SearchBar />*/}
-                    <Form
-                        className="form-row p-0 m-3 mt-5 mb-5 justify-content-center"
-                        type="submit"
-                        value="Submit"
-                        onSubmit={this.handleSubmit}
-                    >
-                        <Form.Label htmlFor="" className="col-form-label text-right col-auto text-uppercase font-weight-normal">Year :</Form.Label>
-                        <Form.Control
-                            type="text"
-                            placeholder=""
-                            className="col-2 text-center font-weight-bold border-dark"
-                            value={this.state.searchYear}
-                            onChange={this.onChangeYear}
-                        />
-                        <Form.Label htmlFor="" className="col-form-label ml-2 text-right col-auto font-weight-normal">NAME :</Form.Label>
-                        <Form.Control
-                            type="text"
-                            placeholder=""
-                            className="col-4 font-weight-bold border-dark"
-                            value={this.state.searchName}
-                            onChange={this.onChangeName}
-                        />
-                        <Button
-                            type="button"
-                            variant="btn ml-4 col-1 outline-dark border-dark gold"
-                            onClick={this.onClickSearch}
-                        >SEARCH</Button>
-                        <Button
-                            type="button"
-                            variant="btn ml-4 col-1 outline-dark border-dark gold"
-                            onClick={this.onClickReset}
-                        >RESET</Button>
-                    </Form>
+                    <SearchBar searchLaureates={this.searchLaureates} />
                 </div>
                 <div>
                     {cards}
