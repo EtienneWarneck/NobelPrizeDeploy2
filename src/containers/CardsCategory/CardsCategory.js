@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-// import classes from './CardsCategory.module.css';
+import classes from './CardsCategory.module.css';
 import WinnerCard from '../../components/WinnerCard/WinnerCard'
-// import HomeButtons from "../HomeButtons/HomeButtons"
-// import buttonCategory from "../../components/ButtonCategory/ButtonCategory"
+import HomeButtons from "../HomeButtons/HomeButtons"
+import buttonCategory from "../../components/ButtonCategory/ButtonCategory"
 import SearchBar from '../../components/SearchBar/SearchBar';
-// import styled from 'styled-components';
-// import Button from 'react-bootstrap/Button';
+import styled from 'styled-components';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 
 // const StyledDiv = styled.div`
 // border: 10px solid orange;
@@ -44,14 +45,13 @@ class Cards extends Component {
             catch(err => console.log(err))
     };
 
-    searchLaureates = (searchYear) => {
+    searchLaureatesByYear = (searchYear) => {
         let category = this.props.match.params.category_name;
-
         axios.get('http://api.nobelprize.org/2.0/nobelPrizes?limit=200&sort=desc&nobelPrizeYear=' + searchYear + '&nobelPrizeCategory=' + category + '&format=json&csvLang=en')
             .then(res => {
-                console.log("HERE", res.data.nobelPrizes[0]?.awardYear)
                 const categoryData = res.data.nobelPrizes;
                 const yearMatch = res.data.nobelPrizes[0]?.awardYear
+                console.log('[CardsCategory.js] yearMatch', res.data.nobelPrizes[0]?.awardYear)
                 this.setState({
                     allCards: categoryData,
                     searchYear: yearMatch
@@ -90,7 +90,10 @@ class Cards extends Component {
 
                     card.laureates[0]?.knownName?.en.toLowerCase().includes(searchName.toLowerCase()) ||
                     card.laureates[1]?.knownName?.en.toLowerCase().includes(searchName.toLowerCase()) ||
-                    card.laureates[2]?.knownName?.en.toLowerCase().includes(searchName.toLowerCase())
+                    card.laureates[2]?.knownName?.en.toLowerCase().includes(searchName.toLowerCase()) ||
+                    card.laureates[0]?.orgName?.en.toLowerCase().includes(searchName.toLowerCase()) ||
+                    card.laureates[1]?.orgName?.en.toLowerCase().includes(searchName.toLowerCase()) ||
+                    card.laureates[2]?.orgName?.en.toLowerCase().includes(searchName.toLowerCase())
                     : null
             )
         })
@@ -115,7 +118,7 @@ class Cards extends Component {
                 {/* <HomeButtons /> */}
                 {/* </StyledDiv> */}
                 <div>
-                    <SearchBar searchLaureates={this.searchLaureates} />
+                    <SearchBar searchLaureatesByYear={this.searchLaureatesByYear} />
                 </div>
                 <div>
                     {cards}

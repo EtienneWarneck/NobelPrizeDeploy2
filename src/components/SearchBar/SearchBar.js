@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-// import InputGroup from 'react-bootstrap/InputGroup';
-// import FormControl from 'react-bootstrap/FormControl';
+import InputGroup from 'react-bootstrap/InputGroup';
+import FormControl from 'react-bootstrap/FormControl';
+import axios from 'axios';
 
 class SearchBar extends Component {
     state = {
@@ -17,7 +19,7 @@ class SearchBar extends Component {
 
     onSubmit = e => {
         e.preventDefault();
-        this.props.searchLaureates(this.state.searchYear);
+        this.props.searchLaureatesByYear(this.state.searchYear);
         this.setState({
             searchYear: ''
         })
