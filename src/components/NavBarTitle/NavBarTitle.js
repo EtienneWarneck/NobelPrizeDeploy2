@@ -10,29 +10,21 @@ class NavBarTitle extends Component {
     render() {
 
         const styleHomeButton = {
-            // border: '1px solid red',
+            border: '1px solid red',
             color: 'black',
             fontSize: '1.2em',
-            // textAlign: 'left',
             marginLeft: '40%',
             marginRight: '10px',
-            // position: 'absolute',
             top: '70%',
-            // width: '100%',
             outline: 'none !important',
             boxShadow: 'none !important',
         }
         const styleHomeButton2 = {
-            // border: '1px solid red',
-                    // display: 'block',
-    
+            border: '1px solid red',
             color: 'black',
             fontSize: '1.2em',
-            // textAlign: 'left',
             marginLeft: '50%',
-            // position: 'absolute',
             top: '70%',
-            // width: '100%',
             outline: 'none !important',
             boxShadow: 'none !important',
         }
