@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import classes from './NavBarTitle.module.css';
+import {Link} from "react-router-dom";
 
 class NavBarTitle extends Component {
 
@@ -37,8 +38,8 @@ class NavBarTitle extends Component {
                     <Nav.Link className={classes.styleText} href='/'>Nobel Prize Laureates</Nav.Link>
                 </Navbar>
                 <div >
-                    <Nav.Link style={styleHomeButton} href="/">Home</Nav.Link>
-                    <Nav.Link style={styleHomeButton2} href="https://github.com/EtienneWarneck/NobelPrizeAPI/tree/master/my-app">GitHub</Nav.Link>
+                    <Link style={styleHomeButton} href="/">Home</Link>
+                    <Link style={styleHomeButton2} href="https://github.com/EtienneWarneck/NobelPrizeAPI/tree/master/my-app">GitHub</Link>
                 </div>
             </div>
         )
