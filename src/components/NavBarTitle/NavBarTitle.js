@@ -16,6 +16,7 @@ class NavBarTitle extends Component {
             marginLeft: '40%',
             marginRight: '10px',
             top: '70%',
+            width: '100px',
             outline: 'none !important',
             boxShadow: 'none !important',
         }
@@ -25,6 +26,7 @@ class NavBarTitle extends Component {
             fontSize: '1.2em',
             marginLeft: '50%',
             top: '70%',
+            width: '100px',
             outline: 'none !important',
             boxShadow: 'none !important',
         }
