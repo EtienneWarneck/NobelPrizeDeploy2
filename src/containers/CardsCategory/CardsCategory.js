@@ -22,59 +22,60 @@ class Cards extends Component {
         searchName: ''
     }
 
-    // renderCard = card => {
-    //     const { search } = this.state;
-    //     var code = country.code.toLowerCase();
 
-    async componentDidMount() {
-        console.log("[CardsCategory.js] ComponentDidMount", this.props)
+    // async componentDidMount() {
+    //     //     console.log("[CardsCategory.js] ComponentDidMount", this.props)
+    //     let category = this.props.match.params.category_name;
+
+    //     await axios.get(`http://api.nobelprize.org/2.0/laureates?limit=200&nobelPrizeCategory=${category}&format=json&csvLang=en`)
+    //         .then(res => {
+    //             this.setState({
+    //                 allCards: res.data.laureates,
+    //                 //<fetch category from the API that your router provides>
+    //                 category: this.props.match.params.category_name,
+    //             })
+    //         }).
+    //         catch(err => console.log(err))
+    // };
+
+
+    //Search laureates
+    searchAll = async (searchYear, searchName) => {
+        console.log('[CardsCategory.js] searchName:', searchName)
+        console.log('[CardsCategory.js] searchYear:', searchYear)
         let category = this.props.match.params.category_name;
+        // console.log('[CardsCategory.js] category:', category)
 
-        await axios.get('http://api.nobelprize.org/2.0/nobelPrizes?limit=200&sort=desc&nobelPrizeCategory=' + category + '&format=json&csvLang=en')
+        await axios.get(`http://api.nobelprize.org/2.0/laureates?limit=200&name=${searchName}&nobelPrizeYear=${searchYear}&nobelPrizeCategory=${category}`)
             .then(res => {
-                const categoryData = res.data.nobelPrizes;
-                // console.log("categoryData", res.data.nobelPrizes)
-                // console.log("CATEGORY", categoryData?.category?.en)
+                const data = res.data.laureates;
+                console.log('[CardsCategory.js] res.data.laureates:', data)
+
+                // const nameMatch = res.data.laureates[0]?.knownName?.en 
+                // console.log('[CardsCategory.js] nameMatch:', nameMatch)
+
+                const yearMatch = res.data.laureates[0]?.nobelPrizes[0]?.awardYear
+                console.log('[CardsCategory.js] yearMatch:', yearMatch)
 
                 this.setState({
-                    allCards: categoryData,
-                    //<fetch category from the API that your router provides>
-                    category: this.props.match.params.category_name,
-                })
-            }).
-            catch(err => console.log(err))
-    };
-
-    searchLaureatesByYear = (searchYear) => {
-        let category = this.props.match.params.category_name;
-        axios.get('http://api.nobelprize.org/2.0/nobelPrizes?limit=200&sort=desc&nobelPrizeYear=' + searchYear + '&nobelPrizeCategory=' + category + '&format=json&csvLang=en')
-            .then(res => {
-                const categoryData = res.data.nobelPrizes;
-                const yearMatch = res.data.nobelPrizes[0]?.awardYear
-                console.log('[CardsCategory.js] yearMatch', res.data.nobelPrizes[0]?.awardYear)
-                this.setState({
-                    allCards: categoryData,
+                    allCards: data,
+                    // searchName:  nameMatch,
                     searchYear: yearMatch
-                    // category: this.props.match.params.category_name,
                 })
             })
             .catch(err => console.log(err))
+    };
+
+
+    clearResults = (clearResults) => {
+        this.setState({
+            allCards: []
+        })
     }
 
     // handleSubmit = e => {
     //     console.log("SUBMIT")
-    //     // alert('A name was submitted: ' + this.state.value);
-    //     let category = this.props.match.params.category_name;
-    //     axios.get('http://api.nobelprize.org/2.0/nobelPrizes?limit=120&sort=desc&nobelPrizeCategory=' + category + '&format=json&csvLang=en')
-    //         .then(res => {
-    //             const categoryData = res.data.nobelPrizes;
-    //             this.setState({
-    //                 allCards: categoryData,
-    //                 searchYear: e.target.value
-    //                 // category: this.props.match.params.category_name,
-    //             })
-    //         })
-    //         .catch(err => console.log(err))
+    //     this.componentDidMount()
     //     e.preventDefault();
     // }
 
@@ -82,33 +83,21 @@ class Cards extends Component {
         const { searchYear, searchName, allCards } = this.state;
 
         let filterCards = allCards.filter(card => {
-
             return (
-                // searchYear === card.awardYear || (!searchYear && card.laureates) ?
-                // searchYear === card.awardYear  ?
-                card.awardYear && card.laureates ?
-
-                    card.laureates[0]?.knownName?.en.toLowerCase().includes(searchName.toLowerCase()) ||
-                    card.laureates[1]?.knownName?.en.toLowerCase().includes(searchName.toLowerCase()) ||
-                    card.laureates[2]?.knownName?.en.toLowerCase().includes(searchName.toLowerCase()) ||
-                    card.laureates[0]?.orgName?.en.toLowerCase().includes(searchName.toLowerCase()) ||
-                    card.laureates[1]?.orgName?.en.toLowerCase().includes(searchName.toLowerCase()) ||
-                    card.laureates[2]?.orgName?.en.toLowerCase().includes(searchName.toLowerCase())
-                    : null
+                card ?
+                    card.knownName?.en.toLowerCase().includes(searchName.toLowerCase())  
+                    : console.log("PROBLEM ...")
             )
         })
-
-        let cards = filterCards.map((card) => {
-            return <WinnerCard
-                key={card.id}
-                awardYear={card.awardYear}
-                category={card.category.en}
-                name={card.laureates[0]?.knownName?.en}
-                name1={card.laureates[1]?.knownName?.en}
-                name2={card.laureates[2]?.knownName?.en}
-                motivation={card.laureates[0].motivation?.en}
-            />
-        });
+            .map((card) => {
+                return <WinnerCard
+                    key={card.id}
+                     awardYear={card.nobelPrizes[0].awardYear}
+                    category={card.nobelPrizes[0]?.category?.en}
+                    name={card.knownName?.en}
+                    motivation={card.nobelPrizes[0]?.motivation?.en}
+                />
+            });
 
         // const style = { display: 'inline', border: '10px solid orange', width: '100px' };
 
@@ -118,12 +107,15 @@ class Cards extends Component {
                 {/* <HomeButtons /> */}
                 {/* </StyledDiv> */}
                 <div>
-                    <SearchBar searchLaureatesByYear={this.searchLaureatesByYear} />
+                    <SearchBar
+                        searchAll={this.searchAll}
+                        clearResults={this.clearResults}
+                        showReset={allCards.length > 0 ? true : false} />
                 </div>
                 <div>
-                    {cards}
+                    {filterCards}
                 </div>
-            </div>
+            </div >
         )
     }
 }
