@@ -16,7 +16,7 @@ class NavBarTitle extends Component {
             // textAlign: 'left',
             marginLeft: '40%',
             marginRight: '10px',
-            position: 'absolute',
+            // position: 'absolute',
             top: '70%',
             // width: '100%',
             outline: 'none !important',
@@ -30,13 +30,13 @@ class NavBarTitle extends Component {
             fontSize: '1.2em',
             // textAlign: 'left',
             marginLeft: '50%',
-            position: 'absolute',
+            // position: 'absolute',
             top: '70%',
             // width: '100%',
             outline: 'none !important',
             boxShadow: 'none !important',
         }
-        
+
         return (
             <div>
                 <Navbar className={classes.style} bg="" expand="lg" color=" #DDC59D">
