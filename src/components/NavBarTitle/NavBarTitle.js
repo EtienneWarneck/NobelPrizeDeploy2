@@ -25,7 +25,7 @@ class NavBarTitle extends Component {
             border: '1px solid red',
             color: 'black',
             fontSize: '1.2em',
-            marginLeft: '50%',
+            // marginLeft: '50%',
             top: '70%',
             width: '100px',
             outline: 'none !important',
