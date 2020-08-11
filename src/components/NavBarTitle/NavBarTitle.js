@@ -11,7 +11,7 @@ class NavBarTitle extends Component {
     render() {
 
         const styleHomeButton = {
-            // border: '1px solid red',
+            border: '1px solid red',
             color: 'black',
             fontSize: '1.2em',
             marginLeft: '40%',
@@ -22,7 +22,7 @@ class NavBarTitle extends Component {
             boxShadow: 'none !important',
         }
         const styleHomeButton2 = {
-            // border: '1px solid red',
+            border: '1px solid red',
             color: 'black',
             fontSize: '1.2em',
             marginLeft: '50%',
