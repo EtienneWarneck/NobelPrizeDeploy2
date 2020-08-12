@@ -27,11 +27,11 @@ class NavBarTitle extends Component {
             boxShadow: 'none !important',
         }
         return (
-            <div style={{ display: 'block' }}>
+            <div style={{ display: 'inline-block' }}>
                 <Navbar className={classes.style} bg="" expand="lg" color=" #DDC59D">
                     <Nav.Link className={classes.styleText} href='/'>Nobel Prize Laureates</Nav.Link>
                 </Navbar>
-                <div style={{ display: 'block' }}>
+                <div style={{ display: 'inline-block' }}>
                     <Link style={styleHomeButton} href="/">Home</Link>
                     <Link style={styleHomeButton2} href="https://github.com/EtienneWarneck/NobelPrizeAPI/tree/master/my-app">GitHub</Link>
                 </div>
