@@ -1,2 +1,2 @@
-![](asset/home.png)
-![](asset/search.png)
+![](assets/home.png)
+![](assets/Search.png)
