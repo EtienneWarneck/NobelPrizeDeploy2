@@ -29,7 +29,7 @@ class NavBarTitle extends Component {
         //     boxShadow: 'none !important',
         // }
         const styleHome = {
-            border: '1px solid green',
+            // border: '1px solid green',
             display: 'inline-block',
             position: 'relative',
             color: 'black',
@@ -42,7 +42,7 @@ class NavBarTitle extends Component {
             boxShadow: 'none !important',
         }
         const styleGithub = {
-            border: '1px solid orange',
+            // border: '1px solid orange',
             display: 'inline-block',
             position: 'relative',
             color: 'black',
@@ -59,7 +59,7 @@ class NavBarTitle extends Component {
                 {/* <Navbar className={classes.style} bg="" expand="lg" color=" #DDC59D"> */}
                 <Nav.Link className={classes.styleText} href='/'>Nobel Prize Laureates</Nav.Link>
                
-                <div style={{ display: 'block', width: '100%' }}>
+                <div style={{ display: 'block', width: '100%', borderBottom: 'green 1px solid' }}>
                     <Nav.Link style={styleHome} href="/">Home</Nav.Link>
                     <Nav.Link style={styleGithub} href="https://github.com/EtienneWarneck/NobelPrizeAPI/tree/master/my-app">GitHub</Nav.Link>
                 </div>
