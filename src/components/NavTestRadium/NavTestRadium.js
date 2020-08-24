@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 // import Navbar from 'react-bootstrap/Navbar'
 // import Container from 'react-bootstrap/Container'
 // import Row from 'react-bootstrap/Row'
@@ -10,10 +10,10 @@ import Radium from 'radium';
 
 class NavTestRadium extends Component {
     render() {
-        // styling div with Radium
-        const style = {
-            border: '5px solid red',
-            color: '#BB8A35',
+
+        const styleTitle = {
+            border: '5px solid green',
+            // color: '#BB8A35',
             height: '8em',
             position: 'relative',
             borderBottom: '1px solid lightgrey',
@@ -34,7 +34,7 @@ class NavTestRadium extends Component {
             boxShadow: 'none !important',
         }
 
-        const styleHomeButton = {
+        const styleHome = {
             border: '1px solid green',
             display: 'inline-block',
             position: 'absolute',
@@ -47,7 +47,7 @@ class NavTestRadium extends Component {
             outline: 'none !important',
             boxShadow: 'none !important',
         }
-        const styleHomeButton2 = {
+        const styleGithub = {
             border: '1px solid orange',
             display: 'inline-block',
             position: 'absolute',
@@ -61,13 +61,15 @@ class NavTestRadium extends Component {
         }
 
         return (
-            <div style={style}>
-                <Nav.Link style={styleText} href='/'>Nobel Prize Laureates</Nav.Link>
-                <div >
-                    <Nav.Link style={styleHomeButton} href="/">Home</Nav.Link>
-                    <Nav.Link style={styleHomeButton2} href="https://github.com/EtienneWarneck/NobelPrizeAPI/tree/master/my-app">GitHub</Nav.Link>
+            <div>
+                <div style={styleTitle}>
+                    <Nav.Link style={styleText} href='/'>Nobel Prize Laureates</Nav.Link>
                 </div>
-            </div>
+                <div>
+                    <Nav.Link style={styleHome} href="/">Home</Nav.Link>
+                    <Nav.Link style={styleGithub} href="https://github.com/EtienneWarneck/NobelPrizeAPI/tree/master/my-app">GitHub</Nav.Link>
+                </div>
+            </div >
         )
     }
 }
