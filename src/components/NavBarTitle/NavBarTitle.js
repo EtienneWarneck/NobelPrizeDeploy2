@@ -29,7 +29,7 @@ class NavBarTitle extends Component {
         const styleHome = {
             border: '1px solid green',
             display: 'inline-block',
-            position: 'absolute',
+            position: 'relative',
             color: 'black',
             fontSize: '1.2em',
             marginLeft: '40%',
@@ -42,7 +42,7 @@ class NavBarTitle extends Component {
         const styleGithub = {
             border: '1px solid orange',
             display: 'inline-block',
-            position: 'absolute',
+            position: 'relative',
             color: 'black',
             fontSize: '1.2em',
             marginLeft: '50%',

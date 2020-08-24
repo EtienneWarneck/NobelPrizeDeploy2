@@ -22,18 +22,19 @@
  /*    */
   .style { 
      /* border: 1px solid red; */
-     color: #BB8A35 !important;
+     /* color: #BB8A35 !important; */
      height: 5em !important;
      position: relative;
-     outline: none !important;
-     box-shadow: none !important;
+     /* outline: none !important; */
+     /* box-shadow: none !important; */
      justify-content: center;
      /* width: 100%; */
  }
 
  .styleText {
-     border: 10px solid blue;
-     color: #DDC59D !important;
+     border: 1px solid blue;
+     /* color: #DDC59D !important; */
+     color: #BB8A35 !important;
      font-size: 3em;
      text-align: center;
      margin: 0;
