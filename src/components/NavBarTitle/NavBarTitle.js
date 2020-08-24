@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import Nav from 'react-bootstrap/Nav'
-import Navbar from 'react-bootstrap/Navbar'
+// import Navbar from 'react-bootstrap/Navbar'
 import classes from './NavBarTitle.module.css';
 // import { Link, Nav } from "react-router-dom";
 import Nav from 'react-bootstrap/Nav'
@@ -30,7 +30,7 @@ class NavBarTitle extends Component {
         // }
         const styleHome = {
             border: '1px solid green',
-            // display: 'inline-block',
+            display: 'inline-block',
             position: 'relative',
             color: 'black',
             fontSize: '1.2em',
@@ -43,7 +43,7 @@ class NavBarTitle extends Component {
         }
         const styleGithub = {
             border: '1px solid orange',
-            display: 'inline',
+            display: 'inline-block',
             position: 'relative',
             color: 'black',
             fontSize: '1.2em',
@@ -55,10 +55,11 @@ class NavBarTitle extends Component {
         }
 
         return (
-            <div style={{ display: 'block', width:'100%'}}>
+            <div style={{ display: 'block', width: '100%' }}>
                 {/* <Navbar className={classes.style} bg="" expand="lg" color=" #DDC59D"> */}
-                    <Nav.Link className={classes.styleText} href='/'>Nobel Prize Laureates</Nav.Link>
-                <div style={{ display: 'block', width:'100%' }}>
+                <Nav.Link className={classes.styleText} href='/'>Nobel Prize Laureates</Nav.Link>
+               
+                <div style={{ display: 'block', width: '100%' }}>
                     <Nav.Link style={styleHome} href="/">Home</Nav.Link>
                     <Nav.Link style={styleGithub} href="https://github.com/EtienneWarneck/NobelPrizeAPI/tree/master/my-app">GitHub</Nav.Link>
                 </div>
