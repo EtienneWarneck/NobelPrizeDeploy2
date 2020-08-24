@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Nav from 'react-bootstrap/Nav'
+// import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import classes from './NavBarTitle.module.css';
 import { Link } from "react-router-dom";
@@ -27,11 +27,11 @@ class NavBarTitle extends Component {
             boxShadow: 'none !important',
         }
         return (
-            <div style={{ display: 'inline-block' }}>
+            <div style={{ display: 'block', width:'100%'}}>
                 <Navbar className={classes.style} bg="" expand="lg" color=" #DDC59D">
                     <Link className={classes.styleText} href='/'>Nobel Prize Laureates</Link>
                 </Navbar>
-                <div style={{ display: 'inline-block' }}>
+                <div style={{ display: 'block', width:'100%' }}>
                     <Link style={styleHomeButton} href="/">Home</Link>
                     <Link style={styleHomeButton2} href="https://github.com/EtienneWarneck/NobelPrizeAPI/tree/master/my-app">GitHub</Link>
                 </div>
