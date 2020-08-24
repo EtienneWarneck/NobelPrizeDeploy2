@@ -10,7 +10,7 @@ class Routing extends Component {
         return (
             <div>
                 <Route path="/" component={NavBarTitle} />
-                <Route path="/" component={NavTestRadium} />
+                {/* <Route path="/" component={NavTestRadium} /> */}
                 <Switch>
                     <Route exact path="/" component={HomeButtons} />
                     <Route  path="/:category_name" component={CardsCategory} />
