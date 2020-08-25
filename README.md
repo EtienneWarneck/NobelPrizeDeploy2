@@ -15,6 +15,6 @@ On the category page, the user can display all the laureates with the button "SH
 
 ![Alternate text](assets/showall.png)
 #
-Or can search by Year or by Name  displaying each laureate on a single card with the "SEARCH" button :
+Or can search by Year or by Name displaying each laureate on a single card with the "SEARCH" button :
 
 ![Alternate text](assets/searchbar.png)

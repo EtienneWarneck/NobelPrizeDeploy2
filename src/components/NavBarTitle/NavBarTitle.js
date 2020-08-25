@@ -57,7 +57,7 @@ class NavBarTitle extends Component {
         return (
             <div style={{ display: 'block', width: '100%' }}>
                 {/* <Navbar className={classes.style} bg="" expand="lg" color=" #DDC59D"> */}
-                <Nav.Link className={classes.styleText} href='/'>Nobel Prize Laureates</Nav.Link>
+                <Nav.Link className={classes.styleText} href='/'>Nobel Prize App</Nav.Link>
                
                 <div style={{ display: 'block', width: '100%', borderBottom: 'grey 1px solid' }}>
                     <Nav.Link style={styleHome} href="/">Home</Nav.Link>
