@@ -15,7 +15,7 @@ On the category page, the user can display all the laureates using one endpoint 
 
 or can search by Year or by Name using another endpoint with the "SEARCH" button :
 
-![Alternate text](assets/search.png)
+![Alternate text](assets/searchbar.png)
 
 The first endpoint displays all the laureates for each year on the same card. 
 The second endpoint displays each laureate on a single card. 
