@@ -9,9 +9,11 @@ The home page allows the user to select the category of its choice :
 
 On the category page, the user can display all the laureates using one endpoint with the button "SHOW ALL LAUREATES BY YEAR":
 
+
 ![](assets/showall.png)
 
-and can search by Year or by Name using another endpoint with the "SEARCH" button :
+
+or can search by Year or by Name using another endpoint with the "SEARCH" button :
 
 ![](assets/search.png)
 
