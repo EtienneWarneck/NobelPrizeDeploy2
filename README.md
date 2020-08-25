@@ -7,15 +7,14 @@ The home page allows the user to select the category of its choice :
 
 ![Alternate text](assets/home.png)
 
-On the category page, the user can display all the laureates using one endpoint with the button "SHOW ALL LAUREATES BY YEAR":
+On the category page, the user can display all the laureates using one endpoint (all the laureates for each year on the same card) with the button "SHOW ALL LAUREATES BY YEAR":
 
 
 ![Alternate text](assets/showall.png)
 
 
-or can search by Year or by Name using another endpoint with the "SEARCH" button :
+
+Or can search by Year or by Name using another endpoint displaying each laureate on a single card with the "SEARCH" button :
 
 ![Alternate text](assets/searchbar.png)
 
-The first endpoint displays all the laureates for each year on the same card. 
-The second endpoint displays each laureate on a single card. 
