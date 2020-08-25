@@ -1,7 +1,6 @@
 # Nobel App
 
 The Nobel app uses two open endpoints about the Nobel Prizes and the Nobel Laureates from Nobelprize.org website.
- 
 The goal was to use React to retrieve and display the data with a personal UI and Design using styling frameworks such as Radium or Module.css
 
 The home page allows the user to select the category of its choice :
