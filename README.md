@@ -5,17 +5,17 @@ The goal was to use React to retrieve and display the data with a personal UI an
 
 The home page allows the user to select the category of its choice :
 
-![](assets/home.png)
+![Alternate text](assets/home.png)
 
 On the category page, the user can display all the laureates using one endpoint with the button "SHOW ALL LAUREATES BY YEAR":
 
 
-![](assets/showall.png)
+![Alternate text](assets/showall.png)
 
 
 or can search by Year or by Name using another endpoint with the "SEARCH" button :
 
-![](assets/search.png)
+![Alternate text](assets/search.png)
 
 The first endpoint displays all the laureates for each year on the same card. 
 The second endpoint displays each laureate on a single card. 
