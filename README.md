@@ -1,8 +1,10 @@
-# Nobel App
+# NobelPrize App
 
 ### React, REST API, modules.css, Radium, Adobe Typekit, Heroku
 This app uses two open endpoints to retrieve data from the API of Nobelprize.org 
 Using React, data was retrieved and displayed with a customized UI design with frameworks such as Module.css and deployed with Heroku.
+
+Please try the app by visiting the link: https://nobeldeploy2.herokuapp.com/
 
 The home page allows the user to select the category of its choice :
 
