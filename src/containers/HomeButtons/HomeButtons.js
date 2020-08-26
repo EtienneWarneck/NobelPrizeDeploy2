@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 // import axios from 'axios';
 import classes from './HomeButtons.module.css';
 import ButtonCategory from '../../components/ButtonCategory/ButtonCategory'
+import Footer from '../components/Footer/Footer'
 
 //RESTRUCTURING TO SINGLE OUT THE CATEGORIES BUTTONS 
 class HomeButtons extends Component {
@@ -54,6 +55,7 @@ class HomeButtons extends Component {
             {/* <div style={style}> */}
                 {allCatMap}
             {/* </div > */}
+            <Footer/>
             </div >
         )
     }

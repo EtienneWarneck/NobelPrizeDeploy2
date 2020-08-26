@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import NavBarTitle from '../components/NavBarTitle/NavBarTitle'
 // import NavTestRadium from '../components/NavTestRadium/NavTestRadium'
-import Footer from '../components/Footer/Footer'
 import HomeButtons from './HomeButtons/HomeButtons';
 import CardsCategory from './CardsCategory/CardsCategory';
 
@@ -16,7 +15,6 @@ class Routing extends Component {
                     <Route exact path="/" component={HomeButtons} />
                     <Route  path="/:category_name" component={CardsCategory} />
                 </Switch>
-                <Footer/>
             </div>
         )
     }
