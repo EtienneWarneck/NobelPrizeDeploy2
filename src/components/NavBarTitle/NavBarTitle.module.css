@@ -34,7 +34,7 @@
  }
 
  .styleText {
-     border: 1px solid blue;
+     /* border: 1px solid blue; */
      /* color: #DDC59D !important; */
      color: #BB8A35 !important;
      font-size: 3em;
