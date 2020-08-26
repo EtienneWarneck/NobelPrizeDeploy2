@@ -5,14 +5,14 @@ Using React, data was retrieved and displayed with a customized UI design and de
 
 Please try the app by following this link : https://nobeldeploy2.herokuapp.com/
 
-### Tools : React, REST API, Bootstrap 4, CSS Modules, Radium, Adobe XD and TypeKit, Heroku
+### Tools : React, REST API, Bootstrap 4, CSS Modules, Radium, Adobe XD and TypeKit, Heroku.
+
 #
 The home page allows the user to select the category of their choosing :
 
 ![Alternate text](assets/home.png)
 #
-The user can display all the laureates (starting 1901, except for Economics starting 1969) with the button 
-"SHOW ALL LAUREATES BY YEAR":
+The user can display all the laureates (starting 1901, except for Economics starting 1969) with the button "SHOW ALL LAUREATES BY YEAR":
 
 ![Alternate text](assets/showall.png)
 #

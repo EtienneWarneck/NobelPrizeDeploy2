@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 // import { Link, Nav } from "react-router-dom";
 import Nav from 'react-bootstrap/Nav'
 
-class FooterTest extends Component {
+class Footer extends Component {
     render() {
 
         const styleGithub = {
@@ -33,5 +33,5 @@ class FooterTest extends Component {
     }
 }
 
-export default FooterTest;
+export default Footer;
 
