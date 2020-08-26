@@ -19,7 +19,7 @@ class FooterTest extends Component {
             width: '100%',
             margin: 'auto',
             outline: 'none !important',
-            boxShadow: 'none !important',
+            boxShadow: 'none !important'
         }
 
         return (

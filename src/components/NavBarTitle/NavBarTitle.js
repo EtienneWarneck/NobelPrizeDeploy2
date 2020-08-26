@@ -7,7 +7,11 @@ class NavBarTitle extends Component {
     render() {
         return (
             <div style={{ display: 'block', width: '100%' }}>
-                <Nav.Link className={classes.styleText} href='/'>Nobel Prize App</Nav.Link>
+                <Nav.Link
+                    className={classes.styleText}
+                    href='/'
+                >Nobel Prize App
+                </Nav.Link>
             </div>
         )
     }
