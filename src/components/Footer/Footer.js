@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 // import Nav from 'react-bootstrap/Nav'
 // import Navbar from 'react-bootstrap/Navbar'
-// import classes from './NavBarTitle.module.css';
 // import { Link, Nav } from "react-router-dom";
 import Nav from 'react-bootstrap/Nav'
 
@@ -23,7 +22,7 @@ class Footer extends Component {
         }
 
         return (
-            <div style={{ display: 'block', width: '100%' }}>
+            <div >
                 <div style={{ display: 'block', width: '100%' }}>
                     <Nav.Link style={styleGithub} href="https://github.com/EtienneWarneck/NobelPrizeDeploy2">GitHub</Nav.Link>
                 </div>
