@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 // import Nav from 'react-bootstrap/Nav'
 // import Navbar from 'react-bootstrap/Navbar'
-import classes from './NavBarTitle.module.css';
+// import classes from './NavBarTitle.module.css';
 // import { Link, Nav } from "react-router-dom";
 import Nav from 'react-bootstrap/Nav'
 
 
-class NavBarTitle extends Component {
+class Footer extends Component {
     render() {
         // const styleHomeButton = {
         //     border: '1px solid red',
@@ -58,7 +58,7 @@ class NavBarTitle extends Component {
         return (
             <div style={{ display: 'block', width: '100%' }}>
                 {/* <Navbar className={classes.style} bg="" expand="lg" color=" #DDC59D"> */}
-                <Nav.Link className={classes.styleText} href='/'>Nobel Prize App</Nav.Link>
+                {/* <Nav.Link className={classes.styleText} href='/'>Nobel Prize App</Nav.Link> */}
 
                 <div style={{ display: 'block', width: '100%', borderBottom: 'grey 1px solid' }}>
                     {/* <Nav.Link style={styleHome} href="/">Home</Nav.Link> */}
@@ -69,5 +69,5 @@ class NavBarTitle extends Component {
     }
 }
 
-export default NavBarTitle;
+export default Footer;
 
