@@ -5,8 +5,8 @@ Using React, data was retrieved and displayed with a customized UI design and de
 
 Please try the app by following this link : https://nobeldeploy2.herokuapp.com/
 
-### Tools: React, REST API, Bootstrap 4, CSS Modules, Radium, Adobe XD and TypeKit, Heroku
-
+### Tools : React, REST API, Bootstrap 4, CSS Modules, Radium, Adobe XD and TypeKit, Heroku
+#
 The home page allows the user to select the category of their choosing :
 
 ![Alternate text](assets/home.png)
