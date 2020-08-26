@@ -56,7 +56,7 @@ class HomeButtons extends Component {
                     {allCatMap}
                     {/* </div > */}
                 </div >
-                    <Footer />
+                    {/* <Footer/> */}
             </div>
         )
     }
