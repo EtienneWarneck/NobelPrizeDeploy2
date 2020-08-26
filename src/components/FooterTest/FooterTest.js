@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 // import { Link, Nav } from "react-router-dom";
 import Nav from 'react-bootstrap/Nav'
 
-
 class FooterTest extends Component {
     render() {
 

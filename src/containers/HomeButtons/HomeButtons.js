@@ -50,14 +50,14 @@ class HomeButtons extends Component {
         //     justifyContent: 'space-around'
         // }
         return (
-            // <div>
-                <div className={classes.container__section}>
-                    {/* <div style={style}> */}
-                    {allCatMap}
-                    {/* </div > */}
-                </div >
-                {/* <FooterTest />
-            </div> */}
+
+            <div className={classes.container__section}>
+                {/* <div style={style}> */}
+                {allCatMap}
+                {/* </div > */}
+                <FooterTest />
+            </div >
+
         )
     }
 }
