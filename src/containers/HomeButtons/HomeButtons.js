@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import axios from 'axios';
 import classes from './HomeButtons.module.css';
 import ButtonCategory from '../../components/ButtonCategory/ButtonCategory';
-import FooterTest from '../components/Footer/FooterTest'
+import FooterTest from '../components/FooterTest/FooterTest'
 
 //RESTRUCTURING TO SINGLE OUT THE CATEGORIES BUTTONS 
 class HomeButtons extends Component {
