@@ -19,7 +19,6 @@
      font-size: 3rem;
  } */
 
- /*    */
   .style { 
      border: 1px solid red;
      /* color: #BB8A35 !important; */
@@ -49,24 +48,3 @@
      text-decoration-line: none !important;
      box-shadow: none !important
  } 
-
-/* .styleHomeButton {
-    border: 1px solid red;
-    color: black;
-    font-size: 1.2em;
-    margin-left: 40%;
-    margin-right: 10px;
-    top: 70%;
-    width: 100px;
-    outline: none !important;
-    box-shadow: none !important;
-}
-.styleHomeButton2 {
-    border: 1px solid red;
-    color: black;
-    font-size: 1.2em;
-    top: 70%;
-    width: 100px;
-    outline: none !important;
-    box-shadow: none !important;
-} */
