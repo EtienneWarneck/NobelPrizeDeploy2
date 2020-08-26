@@ -70,7 +70,7 @@ class ShowAll extends Component {
     }
 
     render() {
-        const { clearResultsNP, showResetNP } = this.props;
+        // const { clearResultsNP, showResetNP } = this.props;
         return (
             <Form
                 className="form-row p-0 m-3 mt-5 mb-5 justify-content-center"

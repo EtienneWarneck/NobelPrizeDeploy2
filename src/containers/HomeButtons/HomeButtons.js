@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 // import axios from 'axios';
 import classes from './HomeButtons.module.css';
-import ButtonCategory from '../../components/ButtonCategory/ButtonCategory'
-import Footer from '../components/Footer/Footer'
+import ButtonCategory from '../../components/ButtonCategory/ButtonCategory';
+import FooterTest from '../components/Footer/FooterTest'
 
 //RESTRUCTURING TO SINGLE OUT THE CATEGORIES BUTTONS 
 class HomeButtons extends Component {
@@ -56,7 +56,7 @@ class HomeButtons extends Component {
                     {allCatMap}
                     {/* </div > */}
                 </div >
-                    {/* <Footer/> */}
+                <FooterTest />
             </div>
         )
     }

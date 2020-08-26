@@ -5,8 +5,9 @@ import React, { Component } from 'react';
 import Nav from 'react-bootstrap/Nav'
 
 
-class Footer extends Component {
+class FooterTest extends Component {
     render() {
+
         const styleGithub = {
             // border: '1px solid orange',
             display: 'inline-block',
@@ -24,12 +25,16 @@ class Footer extends Component {
         return (
             <div >
                 <div style={{ display: 'block', width: '100%' }}>
-                    <Nav.Link style={styleGithub} href="https://github.com/EtienneWarneck/NobelPrizeDeploy2">GitHub</Nav.Link>
+                    <Nav.Link
+                        style={styleGithub}
+                        href="https://github.com/EtienneWarneck/NobelPrizeDeploy2">
+                        GitHub
+                        </Nav.Link>
                 </div>
             </div>
         )
     }
 }
 
-export default Footer;
+export default FooterTest;
 
