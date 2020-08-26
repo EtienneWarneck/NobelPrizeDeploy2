@@ -48,6 +48,7 @@ class Footer extends Component {
             position: 'relative',
             color: 'black',
             fontSize: '1.2em',
+            textAlign: 'center',
             // marginLeft: '50%',
             top: '70%',
             width: '100%',
