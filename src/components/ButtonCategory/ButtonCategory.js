@@ -1,6 +1,4 @@
 import React from 'react'
-// import Button from 'react-bootstrap/Button'
-// import axios from 'axios'
 import classes from  './ButtonCategory.module.css';
 
 function buttonCategory(props) {

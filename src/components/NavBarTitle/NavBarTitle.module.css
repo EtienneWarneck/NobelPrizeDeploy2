@@ -21,7 +21,6 @@
 
   .style { 
      /* border: 1px solid red; */
-     /* color: #BB8A35 !important; */
      height: 5em !important;
      position: relative;
      outline: none !important;
@@ -29,17 +28,14 @@
      text-decoration-line: none !important;
      box-shadow: none !important;
      justify-content: center
-     /* width: 100%; */
  }
 
  .styleText {
      /* border: 1px solid blue; */
-     /* color: #DDC59D !important; */
      color: #BB8A35 !important;
      font-size: 3em;
      text-align: center;
      margin: 0;
-     /* position: absolute; */
      display: block;
      top: 20%;
      width: 100%;

@@ -11,7 +11,6 @@ class App extends Component {
         <React.StrictMode>
           <BrowserRouter>
             <Routing />
-            {/* <Route path="/cards" render={(props) => <CardsWinner {...props} cardsData={this.state.cardsData} />} /> */}
           </BrowserRouter>
         </React.StrictMode>
       </div>

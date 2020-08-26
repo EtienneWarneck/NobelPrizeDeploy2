@@ -23,14 +23,12 @@ class FooterTest extends Component {
         }
 
         return (
-            <div >
-                <div style={{ display: 'block', width: '100%' }}>
-                    <Nav.Link
-                        style={styleGithub}
-                        href="https://github.com/EtienneWarneck/NobelPrizeDeploy2">
-                        GitHub
-                        </Nav.Link>
-                </div>
+            <div style={{ display: 'block', width: '100%' }}>
+                <Nav.Link
+                    style={styleGithub}
+                    href="https://github.com/EtienneWarneck/NobelPrizeDeploy2"
+                >GitHub
+                </Nav.Link>
             </div>
         )
     }
