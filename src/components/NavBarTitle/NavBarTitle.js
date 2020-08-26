@@ -29,7 +29,7 @@ class NavBarTitle extends Component {
         //     boxShadow: 'none !important',
         // }
         const styleHome = {
-            // border: '1px solid green',
+            border: '1px solid green',
             display: 'inline-block',
             position: 'relative',
             color: 'black',
@@ -42,7 +42,7 @@ class NavBarTitle extends Component {
             boxShadow: 'none !important',
         }
         const styleGithub = {
-            // border: '1px solid orange',
+            border: '1px solid orange',
             display: 'inline-block',
             position: 'relative',
             color: 'black',
